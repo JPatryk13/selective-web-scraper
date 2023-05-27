@@ -1,2 +1,2 @@
 # selective_web_scraper
-Chrome extension for scraping highlighted text
+Chrome extension for scraping highlighted text. Currently expected behaviour: pop-up text message with highlighted text. To install go to `chrome://extensions`, switch on `Developer mode`, select `Load unpacked` and find, and select the root directory of the extension.
