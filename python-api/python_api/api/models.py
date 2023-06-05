@@ -11,4 +11,4 @@ class WebContentResource(BaseModel):
 
     @classmethod
     def from_web_content(cls, web_content: WebContent) -> "WebContentResource":
-        return cls(uuid=web_content.uuid, name=web_content.name)
+        return cls(uuid=web_content.uuid, text=web_content.text)

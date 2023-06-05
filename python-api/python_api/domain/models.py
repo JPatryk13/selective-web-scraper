@@ -9,8 +9,8 @@ class WebContent:
     text: str
 
     @classmethod
-    def new(Cls, name: str) -> 'WebContent':
-        return Cls(uuid=str(uuid4()), name=name)
+    def new(Cls, text: str) -> 'WebContent':
+        return Cls(uuid=str(uuid4()), text=text)
     
 
 class IWebContentRepository(ABC):
