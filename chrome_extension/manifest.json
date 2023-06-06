@@ -8,6 +8,7 @@
         "matches": ["<all_urls>"],
         "js": [
           "node_modules/@webcomponents/custom-elements/custom-elements.min.js",
+          "node_modules/jquery/dist/jquery.min.js",
           "scripts/submit-text.js",
           "scripts/content.js"
         ]

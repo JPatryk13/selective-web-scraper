@@ -1,13 +1,18 @@
 from fastapi import FastAPI
-import uvicorn
+from fastapi.middleware.cors import CORSMiddleware
 
 from python_api.api.models import WebContentInputForm, WebContentResource
 from python_api.adapters.repositories import WebContentRepository
 from python_api.domain.models import WebContent
 from python_api.app.services import save_text, retrieve_text
 
-
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["POST", "GET"]
+)
 
 
 @app.post("/web_content/")
