@@ -1,0 +1,49 @@
+{
+    "manifest_version": 3,
+    "name": "Dexonix - Selective Web Scraper",
+    "version": "1.1.0",
+    "description": "Handy Chrome extension that allows you to effortlessly save and organize highlighted text from web pages into your private collection.",
+    "icons": {
+        "16": "media/icons/dexonix_logo16.png",
+        "48": "media/icons/dexonix_logo48.png",
+        "128": "media/icons/dexonix_logo128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "node_modules/@webcomponents/custom-elements/custom-elements.min.js",
+                "node_modules/@popperjs/core/dist/umd/popper.min.js",
+                "node_modules/bootstrap/dist/js/bootstrap.min.js",
+                "content_scripts/content.js",
+                "content_scripts/submit_text.js"
+            ]
+        },
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content_scripts/get_window_dimensions.js"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "background": {
+        "service_worker": "service-worker.js"
+    },
+    "action": {
+        "default_popup": "popup/popup.html",
+        "default_icon": {
+            "16": "media/icons/dexonix_logo16.png",
+            "48": "media/icons/dexonix_logo48.png",
+            "128": "media/icons/dexonix_logo128.png"
+        },
+        "default_title": "Dexonix - Selective Web Scraper"
+    },
+    "permissions": [
+        "tabs"
+    ]
+}
