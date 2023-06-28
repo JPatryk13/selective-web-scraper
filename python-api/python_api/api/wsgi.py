@@ -18,7 +18,13 @@ app.add_middleware(
 @app.post("/web_content/")
 def save_item(web_content_save_form: WebContentInputForm) -> WebContentResource:
     repository = WebContentRepository()
-    web_content: WebContent = save_text(web_content_save_form.text, repository)
+
+    web_content: WebContent = save_text(
+        text=web_content_save_form.text,
+        timestamp=web_content_save_form.timestamp,
+        url=web_content_save_form.url,
+        web_contect_repository=repository
+    )
     return WebContentResource.from_web_content(web_content)
 
 

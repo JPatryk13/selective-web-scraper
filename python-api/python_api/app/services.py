@@ -1,8 +1,8 @@
 from python_api.domain.models import WebContent, IWebContentRepository
 
 
-def save_text(text: str, web_contect_repository: IWebContentRepository) -> WebContent:
-    web_content = WebContent.new(text)
+def save_text(text: str, timestamp: int, url: str, web_contect_repository: IWebContentRepository) -> WebContent:
+    web_content = WebContent.new(text, timestamp, url)
     web_contect_repository.save(web_content)
     return web_content
 

@@ -7,10 +7,12 @@ from abc import ABC, abstractmethod
 class WebContent:
     uuid: str
     text: str
+    timestamp: int
+    url: str | None
 
     @classmethod
-    def new(Cls, text: str) -> 'WebContent':
-        return Cls(uuid=str(uuid4()), text=text)
+    def new(Cls, text: str, timestamp: int, url: str = None) -> 'WebContent':
+        return Cls(uuid=str(uuid4()), text=text, timestamp=timestamp, url=url)
     
 
 class IWebContentRepository(ABC):
