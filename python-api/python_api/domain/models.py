@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 from uuid import uuid4
 from abc import ABC, abstractmethod
+from python_api.domain.types import NumberOfItems, Sorting
 
 
 @dataclass
@@ -22,4 +23,8 @@ class IWebContentRepository(ABC):
     
     @abstractmethod
     def get(self, uuid: str) -> WebContent:
+        raise NotImplementedError
+    
+    @abstractmethod
+    def get_many(self, no_of_items: NumberOfItems, sorting: Sorting = None) -> list[WebContent]:
         raise NotImplementedError

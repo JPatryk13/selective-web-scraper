@@ -1,0 +1,39 @@
+{
+    "manifest_version": 3,
+    "name": "Dexonix ContentCapture",
+    "version": "0.3.0",
+    "description": "Allows you to effortlessly save and organize highlighted text from web pages into your private collection.",
+    "icons": {
+        "16": "media/logo/dexonix_logo16.png",
+        "48": "media/logo/dexonix_logo48.png",
+        "128": "media/logo/dexonix_logo128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "node_modules/@webcomponents/custom-elements/custom-elements.min.js",
+                "node_modules/@popperjs/core/dist/umd/popper.min.js",
+                "node_modules/bootstrap/dist/js/bootstrap.min.js",
+                "path/to/content-scripts.js"
+            ]
+        }
+    ],
+    "background": {
+        "service_worker": "path/to/service-worker.js"
+    },
+    "action": {
+        "default_popup": "popup/popup.html",
+        "default_icon": {
+            "16": "media/logo/dexonix_logo16.png",
+            "48": "media/logo/dexonix_logo48.png",
+            "128": "media/logo/dexonix_logo128.png"
+        },
+        "default_title": "Dexonix ContentCapture"
+    },
+    "permissions": [
+        "tabs"
+    ]
+}

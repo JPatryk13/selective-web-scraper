@@ -4,13 +4,13 @@ from python_api.domain.models import WebContent
 class WebContentInputForm(BaseModel):
     text: str
     timestamp: int
-    url: str | None
+    url: str
 
 
 class WebContentResource(BaseModel):
     uuid: str
     text: str
-    timestamp: int
+    timestamp: int | None
     url: str | None
 
     @classmethod
