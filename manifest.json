@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Dexonix ContentCapture",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "description": "Allows you to effortlessly save and organize highlighted text from web pages into your private collection.",
     "icons": {
         "16": "./media/logo/dexonix_logo16.png",
