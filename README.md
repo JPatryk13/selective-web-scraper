@@ -20,4 +20,7 @@
     ```
 ## v0.3.0
 - Switched to TypeScript + Webpack configuration
-- Separated dev and prod dependencies
+- Separated dev and prod dependencies (work in progress)
+
+## Following versions
+Moved to a separate repo
