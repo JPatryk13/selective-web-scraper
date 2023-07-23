@@ -2,18 +2,22 @@ from dataclasses import dataclass
 from uuid import uuid4
 from abc import ABC, abstractmethod
 from python_api.domain.types import NumberOfItems, Sorting
+from datetime import datetime
 
 
 @dataclass
 class WebContent:
     uuid: str
-    text: str
-    timestamp: int
-    url: str | None
+    title: str | None
+    body: str
+    createdAt: int
+    lastUpdatedAt: int
+    src: str
 
     @classmethod
-    def new(Cls, text: str, timestamp: int, url: str = None) -> 'WebContent':
-        return Cls(uuid=str(uuid4()), text=text, timestamp=timestamp, url=url)
+    def new(Cls, title: str, body: str, src: str) -> 'WebContent':
+        timestamp: int = int(datetime.timestamp(datetime.now())*1000)
+        return Cls(uuid=str(uuid4()), title=title, body=body, createdAt=timestamp, lastUpdatedAt=timestamp, src=src)
     
 
 class IWebContentRepository(ABC):

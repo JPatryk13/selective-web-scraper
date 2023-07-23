@@ -22,9 +22,9 @@ def save_item(web_content_save_form: WebContentInputForm) -> WebContentResource:
     repository = WebContentRepository()
 
     web_content: WebContent = save_text(
-        text=web_content_save_form.text,
-        timestamp=web_content_save_form.timestamp,
-        url=web_content_save_form.url,
+        title=web_content_save_form.title,
+        body=web_content_save_form.body,
+        src=web_content_save_form.src,
         web_contect_repository=repository
     )
     return WebContentResource.from_web_content(web_content)
@@ -42,7 +42,7 @@ def get_item(uuid: str) -> WebContentResource:
     
 
 @app.get("/web_content/")
-def get_items(sorting: Sorting, no_of_items: NumberOfItems) -> list[WebContentResource]:
+def get_items(sorting: Sorting, no_of_items: NumberOfItems) -> dict[str, list[WebContentResource]]:
     repository = WebContentRepository()
 
     web_content: list[WebContent] = retrieve_many(sorting, no_of_items, repository)
@@ -50,5 +50,5 @@ def get_items(sorting: Sorting, no_of_items: NumberOfItems) -> list[WebContentRe
     if web_content is None:
         return [("Not found", 404)]
     else:
-        return list(map(WebContentResource.from_web_content, web_content))
+        return {"notes": list(map(WebContentResource.from_web_content, web_content))}
     

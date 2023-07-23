@@ -8,7 +8,7 @@ class WebContentRepository:
     def __init__(self):
         myclient = pymongo.MongoClient("mongodb://localhost:27017")
         mydb = myclient["dexonix"]
-        self._web_content_collection = mydb["web_content"]
+        self._web_content_collection = mydb["notes"]
 
     def save(self, web_content):
         self._web_content_collection.insert_one(web_content.__dict__)
@@ -17,9 +17,11 @@ class WebContentRepository:
         web_content = self._web_content_collection.find_one({"uuid": uuid})
         return WebContent(
             uuid=web_content["uuid"],
-            text=web_content["text"],
-            timestamp=web_content.get("timestamp", None),
-            url=web_content.get("url", None)
+            title=web_content["title"],
+            body=web_content["body"],
+            createdAt=web_content["createdAt"],
+            lastUpdatedAt=web_content["lastUpdatedAt"],
+            src=web_content["src"]
         )
     
     def get_many(self, no_of_items: NumberOfItems, sorting: Sorting) -> list[WebContent]:
@@ -29,12 +31,14 @@ class WebContentRepository:
         if sorting == "desc":
             sorting_val = -1
 
-        for web_content in self._web_content_collection.find().sort("timestamp", sorting_val):
+        for web_content in self._web_content_collection.find().sort([("timestamp", sorting_val), ("createdAt", sorting_val)]):
             item_list.append(WebContent(
                 uuid=web_content["uuid"],
-                text=web_content["text"],
-                timestamp=web_content.get("timestamp", None),
-                url=web_content.get("url", None)
+                title=web_content["title"],
+                body=web_content["body"],
+                createdAt=web_content["createdAt"],
+                lastUpdatedAt=web_content["lastUpdatedAt"],
+                src=web_content["src"]
             ))
 
             if no_of_items != "all":

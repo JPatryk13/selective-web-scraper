@@ -2,8 +2,8 @@ from python_api.domain.models import WebContent, IWebContentRepository
 from python_api.domain.types import Sorting, NumberOfItems
 
 
-def save_text(text: str, timestamp: int, url: str, web_contect_repository: IWebContentRepository) -> WebContent:
-    web_content = WebContent.new(text, timestamp, url)
+def save_text(title: str, body: str, src: str, web_contect_repository: IWebContentRepository) -> WebContent:
+    web_content = WebContent.new(title=title, body=body, src=src)
     web_contect_repository.save(web_content)
     return web_content
 

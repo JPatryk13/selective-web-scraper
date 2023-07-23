@@ -1,4 +1,6 @@
-import { InternalMessageMap, NoteMap } from "./Types";
+import { NoteMap } from "@tools/definitions/types/Note";
+import { InternalMessageMap } from "@tools/definitions/types/InternalMessage";
+import { Payload } from "@tools/definitions/types/Payload";
 
 
 /**
@@ -16,21 +18,23 @@ import { InternalMessageMap, NoteMap } from "./Types";
  * 
  * @author Patryk Jesionka
  */
-abstract class NoteDefinition {
-    public abstract title?: NoteMap["title"];
-    public abstract body?: NoteMap["body"];
-    public abstract src?: NoteMap["src"];
-    protected abstract uuid?: NoteMap["uuid"];
-    protected abstract createdAt?: NoteMap["createdAt"];
-    protected abstract lastUpdatedAt?: NoteMap["lastUpdatedAt"];
+export abstract class NoteDefinition {
+    public abstract title?: NoteMap.Type["title"];
+    public abstract body?: NoteMap.Type["body"];
+    public abstract src?: NoteMap.Type["src"];
+    protected abstract uuid?: NoteMap.Type["uuid"];
+    protected abstract createdAt?: NoteMap.Type["createdAt"];
+    protected abstract lastUpdatedAt?: NoteMap.Type["lastUpdatedAt"];
 
-    protected abstract isPublicDataSet(): boolean;
-    protected abstract isProtectedDataSet(): boolean;
+    protected abstract areAllPublicDataSet(obj?: NoteMap.Type): boolean;
+    protected abstract areAllProtectedDataSet(obj?: NoteMap.Type): boolean;
 
-    public abstract fromExistingNote(note: NoteMap): void;
-    public abstract setProtectedValues(uuid: NoteMap["uuid"], createdAt: NoteMap["createdAt"], lastUpdatedAt: NoteMap["lastUpdatedAt"]): void;
-    public abstract getPublicValuesAsMap(): NoteMap;
-    public abstract getAsMap(): NoteMap;
+    public abstract fromExistingNote(note: NoteMap.Type): void;
+    public abstract setProtectedValues(uuid: NoteMap.Type["uuid"], createdAt: NoteMap.Type["createdAt"], lastUpdatedAt: NoteMap.Type["lastUpdatedAt"]): void;
+    public abstract getAsMap(): NoteMap.Type | null;
+
+    public abstract getCreateNoteRequestPayload(): Payload.Request.CreateNote.Type | null;
+    public abstract getCreateNoteResponsePayload(): Payload.Response.CreateNote.Type | null;
 }
 
 
@@ -49,15 +53,13 @@ abstract class NoteDefinition {
  * 
  * @author Patryk Jesionka
  */
-abstract class InternalMessageDefinition {
-    public abstract mid?: InternalMessageMap["mid"];
-    public abstract payload?: InternalMessageMap["payload"];
+export abstract class InternalMessageDefinition {
+    public abstract mid?: InternalMessageMap.Type["mid"];
+    public abstract payload?: InternalMessageMap.Type["payload"];
 
-    protected abstract isDataSet(): boolean;
-    protected abstract verifyPayload(payload: InternalMessageMap["payload"]): boolean;
+    protected abstract areAllDataSet(): boolean;
+    protected abstract isPayloadValid(payload: InternalMessageMap.Type["payload"]): boolean;
 
-    public abstract fromExistingMessage(message: InternalMessageMap): void;
-    public abstract getAsMap(): InternalMessageMap;
+    public abstract fromExistingMessage(message: InternalMessageMap.Type): void;
+    public abstract getAsMap(): InternalMessageMap.Type | null;
 }
-
-export { NoteDefinition, InternalMessageDefinition };
