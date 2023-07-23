@@ -27,7 +27,7 @@ function getMarkerPosition() {
         .getRangeAt(0)
         .getBoundingClientRect();
     return {
-        // Substract width of marker button -> 40px / 2 = 20
+        // Subtract width of marker button -> 40px / 2 = 20
         left: rangeBounds.left + rangeBounds.width / 2 - 20,
         top: rangeBounds.top - 30,
         display: "flex",

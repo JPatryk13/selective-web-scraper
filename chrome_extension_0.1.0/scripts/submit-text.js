@@ -77,9 +77,27 @@ class SubmitText extends HTMLElement {
 
       // Here, you can make an AJAX request to send the highlighted text to the server
       // or perform any other action you want, such as storing it in localStorage or a database.
+      var url = "http://127.0.0.1:8000/web_content/";
+      var data = {
+        text: String(highlightedText),
+      };
 
-      window.alert(highlightedText);
+      window.alert("Trying to post: " + JSON.stringify(data));
 
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", url, true);
+
+      xhr.setRequestHeader("accept", "application/json");
+      xhr.setRequestHeader("Content-Type", "application/json");
+
+      xhr.onload = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          var response = JSON.parse(xhr.responseText);
+          // Handle the response here
+        }
+      };
+
+      xhr.send(JSON.stringify(data));
     }
   }
 
