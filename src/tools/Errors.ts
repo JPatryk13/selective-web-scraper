@@ -9,8 +9,6 @@ export const IncorrectTypeWarning = (paramValue: any, paramName: string, typeExp
 
 export const UndefinedValueWarning = (paramName: string) => `Given ${paramName} is undefined.`
 
-export const UndefinedWithinObjectWarning = (key: string, givenKeys: string[], obj: { [key: string]: any }) => `${key} is undefined. Given keys: ${givenKeys}, while the object has ${Object.keys(obj)}.`
+export const MissingRequiredKeys = (objectKeys: string[], requiredKeys: string[]) => `Missing required keys: ${requiredKeys.map((reqKey) => !objectKeys.includes(reqKey))}. Object has keys: ${objectKeys}, while required keys are ${requiredKeys}.`
 
-export const NotInSchemaWarning = (paramName: string) => `Found field ${paramName} that is not defined within the schema.`
-
-export const NotMemberWarning = (paramName: string, paramValue: string, className: string) => `${paramName} with value ${paramValue} is not a member of ${className}.`
+export const NotPartOfSchemaWarning = (extraKeys: string[], requiredKeys: string[], optionalKeys: string[]) => `Found field(s) ${extraKeys} that is/are not defined within the schema with required keys: ${requiredKeys} and optional keys: ${optionalKeys}`

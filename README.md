@@ -1,4 +1,7 @@
-# Codename: selective_web_scraper
+# Work title: Selective Web Scraper
+
+Google extension written in TypeScript (and API mock is written in Python) for collecting highlighted text from websites. Was supposed to be a part of the project I participated in, however the project came to an end. The extension can be added to Google Chrome browser. Some functionalities are to available at the moment.
+
 ## v0.1.0
 - Scraping highlighted text with content scripts and `customElements`
 - Sending text to python API with `XMLHttpRequest`. `POST` request payload:

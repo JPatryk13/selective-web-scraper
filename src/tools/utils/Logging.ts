@@ -1,6 +1,9 @@
 import { MID, Message } from '@tools/Types';
 import { EventEmitter } from 'events';
 
+// export interface LogOptions {
+//     minLevels: { [module: string]: string }
+// }
 
 export interface LogEntry {
     level: string;
@@ -9,10 +12,6 @@ export interface LogEntry {
     group?: { args: any[] };
     message: string;
 }
-
-// export interface LogOptions {
-//     minLevels: { [module: string]: string }
-// }
 
 export interface LogListener {
     (logEntry: LogEntry): void | Promise<void>

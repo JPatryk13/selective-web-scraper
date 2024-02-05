@@ -1,0 +1,166 @@
+[
+    {
+        "mid": "RequestCreateNote",
+        "payload": {
+            "title": "Some title",
+            "body": "ule provides helpful calendar-related functions. The utc.now function",
+            "src": "https://some.web/address/goes/here"
+        }
+    },
+    {
+        "mid": "ResponseCreateNote",
+        "payload": {
+            "title": "Some title",
+            "body": "ule provides helpful calendar-related functions. The utc.now function",
+            "src": "https://some.web/address/goes/here",
+            "uuid": "54e0b508-cfa8-48ec-a29f-cd8502a47362",
+            "createdAt": 1689957914403.387,
+            "lastUpdatedAt": 1689957914403.387
+        }
+    },
+    {
+        "mid": "RequestUpdateNote",
+        "payload": {
+            "uuid": "54e0b508-cfa8-48ec-a29f-cd8502a47362",
+            "title": "Some title"
+        }
+    },
+    {
+        "mid": "RequestUpdateNote",
+        "payload": {
+            "uuid": "54e0b508-cfa8-48ec-a29f-cd8502a47362",
+            "body": "ule provides helpful calendar-related functions. The utc.now function"
+        }
+    },
+    {
+        "mid": "RequestUpdateNote",
+        "payload": {
+            "uuid": "54e0b508-cfa8-48ec-a29f-cd8502a47362",
+            "src": "https://some.web/address/goes/here"
+        }
+    },
+    {
+        "mid": "ResponseUpdateNote",
+        "payload": {
+            "lastUpdatedAt": 1689957914403.387
+        }
+    },
+    {
+        "mid": "RequestDeleteNote",
+        "payload": {
+            "uuid": "54e0b508-cfa8-48ec-a29f-cd8502a47362"
+        }
+    },
+    {
+        "mid": "ResponseDeleteNote",
+        "payload": {
+            "success": false
+        }
+    },
+    {
+        "mid": "RequestGetNote",
+        "payload": {
+            "uuid": "54e0b508-cfa8-48ec-a29f-cd8502a47362"
+        }
+    },
+    {
+        "mid": "ResponseGetNote",
+        "payload": {
+            "title": "Some title",
+            "body": "ule provides helpful calendar-related functions. The utc.now function",
+            "src": "https://some.web/address/goes/here",
+            "uuid": "54e0b508-cfa8-48ec-a29f-cd8502a47362",
+            "createdAt": 1689957914403.387,
+            "lastUpdatedAt": 1689957914403.387
+        }
+    },
+    {
+        "mid": "RequestGetManyNotes",
+        "payload": {
+            "count": 10,
+            "sortBy": "Added: Newest"
+        }
+    },
+    {
+        "mid": "RequestGetManyNotes",
+        "payload": {
+            "count": 10,
+            "sortBy": "Added: Oldest"
+        }
+    },
+    {
+        "mid": "RequestGetManyNotes",
+        "payload": {
+            "count": 10,
+            "sortBy": "Most relevant",
+            "searchPhrase": {
+                "title": "Some title"
+            }
+        }
+    },
+    {
+        "mid": "RequestGetManyNotes",
+        "payload": {
+            "count": 10,
+            "sortBy": "Most relevant",
+            "searchPhrase": {
+                "body": "ule provides helpful calendar-related functions. The utc.now function"
+            }
+        }
+    },
+    {
+        "mid": "RequestGetManyNotes",
+        "payload": {
+            "count": 10,
+            "sortBy": "Most relevant",
+            "searchPhrase": {
+                "src": "https://some.web/address/goes/here"
+            }
+        }
+    },
+    {
+        "mid": "ResponseGetManyNotes",
+        "payload": {
+            "notes": [
+                {
+                    "title": "Some title",
+                    "body": "ule provides helpful calendar-related functions. The utc.now function",
+                    "src": "https://some.web/address/goes/here",
+                    "uuid": "54e0b508-cfa8-48ec-a29f-cd8502a47362",
+                    "createdAt": 1689957914403.387,
+                    "lastUpdatedAt": 1689957914403.387
+                }
+            ]
+        }
+    },
+    {
+        "mid": "RequestGetScreenWidth",
+        "payload": null
+    },
+    {
+        "mid": "ResponseGetScreenWidth",
+        "payload": {
+            "screenWidth": 843.6
+        }
+    },
+    {
+        "mid": "RequestUserRedirect",
+        "payload": {
+            "url": "http://some.url/goes/here"
+        }
+    },
+    {
+        "mid": "Log",
+        "payload": {
+            "level": "debug",
+            "module": "moduleName",
+            "location": "className.moduleName",
+            "group": {
+                "args": [
+                    "Some optional arguments"
+                ]
+            },
+            "message": "That's debug message"
+        }
+    }
+]

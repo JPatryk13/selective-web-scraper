@@ -1,0 +1,362 @@
+[
+    {
+        "key": "title",
+        "invalidType": "number",
+        "validType": [
+            "string",
+            "null"
+        ],
+        "note": {
+            "title": 42,
+            "body": "ule provides helpful calendar- related functions.The utc.now function",
+            "src": "https://some.web/address/goes/here",
+            "uuid": "54e0b508 - cfa8 - 48ec - a29f - cd8502a47362",
+            "createdAt": 1689957914403.387,
+            "lastUpdatedAt": 1689957914403.387
+        }
+    },
+    {
+        "key": "title",
+        "invalidType": "boolean",
+        "validType": [
+            "string",
+            "null"
+        ],
+        "note": {
+            "title": true,
+            "body": "ule provides helpful calendar- related functions.The utc.now function",
+            "src": "https://some.web/address/goes/here",
+            "uuid": "54e0b508 - cfa8 - 48ec - a29f - cd8502a47362",
+            "createdAt": 1689957914403.387,
+            "lastUpdatedAt": 1689957914403.387
+        }
+    },
+    {
+        "key": "title",
+        "invalidType": "object",
+        "validType": [
+            "string",
+            "null"
+        ],
+        "note": {
+            "title": {
+                "key": "value"
+            },
+            "body": "ule provides helpful calendar- related functions.The utc.now function",
+            "src": "https://some.web/address/goes/here",
+            "uuid": "54e0b508 - cfa8 - 48ec - a29f - cd8502a47362",
+            "createdAt": 1689957914403.387,
+            "lastUpdatedAt": 1689957914403.387
+        }
+    },
+    {
+        "key": "body",
+        "invalidType": "null",
+        "validType": [
+            "string"
+        ],
+        "note": {
+            "title": "Some title.",
+            "body": null,
+            "src": "https://some.web/address/goes/here",
+            "uuid": "54e0b508 - cfa8 - 48ec - a29f - cd8502a47362",
+            "createdAt": 1689957914403.387,
+            "lastUpdatedAt": 1689957914403.387
+        }
+    },
+    {
+        "key": "body",
+        "invalidType": "number",
+        "validType": [
+            "string"
+        ],
+        "note": {
+            "title": "Some title.",
+            "body": 42,
+            "src": "https://some.web/address/goes/here",
+            "uuid": "54e0b508 - cfa8 - 48ec - a29f - cd8502a47362",
+            "createdAt": 1689957914403.387,
+            "lastUpdatedAt": 1689957914403.387
+        }
+    },
+    {
+        "key": "body",
+        "invalidType": "boolean",
+        "validType": [
+            "string"
+        ],
+        "note": {
+            "title": "Some title.",
+            "body": true,
+            "src": "https://some.web/address/goes/here",
+            "uuid": "54e0b508 - cfa8 - 48ec - a29f - cd8502a47362",
+            "createdAt": 1689957914403.387,
+            "lastUpdatedAt": 1689957914403.387
+        }
+    },
+    {
+        "key": "body",
+        "invalidType": "object",
+        "validType": [
+            "string"
+        ],
+        "note": {
+            "title": "Some title.",
+            "body": {
+                "key": "value"
+            },
+            "src": "https://some.web/address/goes/here",
+            "uuid": "54e0b508 - cfa8 - 48ec - a29f - cd8502a47362",
+            "createdAt": 1689957914403.387,
+            "lastUpdatedAt": 1689957914403.387
+        }
+    },
+    {
+        "key": "src",
+        "invalidType": "null",
+        "validType": [
+            "string"
+        ],
+        "note": {
+            "title": "Some title.",
+            "body": "ule provides helpful calendar- related functions.The utc.now function",
+            "src": null,
+            "uuid": "54e0b508 - cfa8 - 48ec - a29f - cd8502a47362",
+            "createdAt": 1689957914403.387,
+            "lastUpdatedAt": 1689957914403.387
+        }
+    },
+    {
+        "key": "src",
+        "invalidType": "number",
+        "validType": [
+            "string"
+        ],
+        "note": {
+            "title": "Some title.",
+            "body": "ule provides helpful calendar- related functions.The utc.now function",
+            "src": 42,
+            "uuid": "54e0b508 - cfa8 - 48ec - a29f - cd8502a47362",
+            "createdAt": 1689957914403.387,
+            "lastUpdatedAt": 1689957914403.387
+        }
+    },
+    {
+        "key": "src",
+        "invalidType": "boolean",
+        "validType": [
+            "string"
+        ],
+        "note": {
+            "title": "Some title.",
+            "body": "ule provides helpful calendar- related functions.The utc.now function",
+            "src": true,
+            "uuid": "54e0b508 - cfa8 - 48ec - a29f - cd8502a47362",
+            "createdAt": 1689957914403.387,
+            "lastUpdatedAt": 1689957914403.387
+        }
+    },
+    {
+        "key": "src",
+        "invalidType": "object",
+        "validType": [
+            "string"
+        ],
+        "note": {
+            "title": "Some title.",
+            "body": "ule provides helpful calendar- related functions.The utc.now function",
+            "src": {
+                "key": "value"
+            },
+            "uuid": "54e0b508 - cfa8 - 48ec - a29f - cd8502a47362",
+            "createdAt": 1689957914403.387,
+            "lastUpdatedAt": 1689957914403.387
+        }
+    },
+    {
+        "key": "uuid",
+        "invalidType": "null",
+        "validType": [
+            "string"
+        ],
+        "note": {
+            "title": "Some title.",
+            "body": "ule provides helpful calendar- related functions.The utc.now function",
+            "src": "https://some.web/address/goes/here",
+            "uuid": null,
+            "createdAt": 1689957914403.387,
+            "lastUpdatedAt": 1689957914403.387
+        }
+    },
+    {
+        "key": "uuid",
+        "invalidType": "number",
+        "validType": [
+            "string"
+        ],
+        "note": {
+            "title": "Some title.",
+            "body": "ule provides helpful calendar- related functions.The utc.now function",
+            "src": "https://some.web/address/goes/here",
+            "uuid": 42,
+            "createdAt": 1689957914403.387,
+            "lastUpdatedAt": 1689957914403.387
+        }
+    },
+    {
+        "key": "uuid",
+        "invalidType": "boolean",
+        "validType": [
+            "string"
+        ],
+        "note": {
+            "title": "Some title.",
+            "body": "ule provides helpful calendar- related functions.The utc.now function",
+            "src": "https://some.web/address/goes/here",
+            "uuid": true,
+            "createdAt": 1689957914403.387,
+            "lastUpdatedAt": 1689957914403.387
+        }
+    },
+    {
+        "key": "uuid",
+        "invalidType": "object",
+        "validType": [
+            "string"
+        ],
+        "note": {
+            "title": "Some title.",
+            "body": "ule provides helpful calendar- related functions.The utc.now function",
+            "src": "https://some.web/address/goes/here",
+            "uuid": {
+                "key": "value"
+            },
+            "createdAt": 1689957914403.387,
+            "lastUpdatedAt": 1689957914403.387
+        }
+    },
+    {
+        "key": "createdAt",
+        "invalidType": "null",
+        "validType": [
+            "number"
+        ],
+        "note": {
+            "title": "Some title.",
+            "body": "ule provides helpful calendar- related functions.The utc.now function",
+            "src": "https://some.web/address/goes/here",
+            "uuid": "54e0b508 - cfa8 - 48ec - a29f - cd8502a47362",
+            "createdAt": null,
+            "lastUpdatedAt": 1689957914403.387
+        }
+    },
+    {
+        "key": "createdAt",
+        "invalidType": "string",
+        "validType": [
+            "number"
+        ],
+        "note": {
+            "title": "Some title.",
+            "body": "ule provides helpful calendar- related functions.The utc.now function",
+            "src": "https://some.web/address/goes/here",
+            "uuid": "54e0b508 - cfa8 - 48ec - a29f - cd8502a47362",
+            "createdAt": "string",
+            "lastUpdatedAt": 1689957914403.387
+        }
+    },
+    {
+        "key": "createdAt",
+        "invalidType": "boolean",
+        "validType": [
+            "number"
+        ],
+        "note": {
+            "title": "Some title.",
+            "body": "ule provides helpful calendar- related functions.The utc.now function",
+            "src": "https://some.web/address/goes/here",
+            "uuid": "54e0b508 - cfa8 - 48ec - a29f - cd8502a47362",
+            "createdAt": true,
+            "lastUpdatedAt": 1689957914403.387
+        }
+    },
+    {
+        "key": "createdAt",
+        "invalidType": "object",
+        "validType": [
+            "number"
+        ],
+        "note": {
+            "title": "Some title.",
+            "body": "ule provides helpful calendar- related functions.The utc.now function",
+            "src": "https://some.web/address/goes/here",
+            "uuid": "54e0b508 - cfa8 - 48ec - a29f - cd8502a47362",
+            "createdAt": {
+                "key": "value"
+            },
+            "lastUpdatedAt": 1689957914403.387
+        }
+    },
+    {
+        "key": "lastUpdatedAt",
+        "invalidType": "null",
+        "validType": [
+            "number"
+        ],
+        "note": {
+            "title": "Some title.",
+            "body": "ule provides helpful calendar- related functions.The utc.now function",
+            "src": "https://some.web/address/goes/here",
+            "uuid": "54e0b508 - cfa8 - 48ec - a29f - cd8502a47362",
+            "createdAt": 1689957914403.387,
+            "lastUpdatedAt": null
+        }
+    },
+    {
+        "key": "lastUpdatedAt",
+        "invalidType": "string",
+        "validType": [
+            "number"
+        ],
+        "note": {
+            "title": "Some title.",
+            "body": "ule provides helpful calendar- related functions.The utc.now function",
+            "src": "https://some.web/address/goes/here",
+            "uuid": "54e0b508 - cfa8 - 48ec - a29f - cd8502a47362",
+            "createdAt": 1689957914403.387,
+            "lastUpdatedAt": "string"
+        }
+    },
+    {
+        "key": "lastUpdatedAt",
+        "invalidType": "boolean",
+        "validType": [
+            "number"
+        ],
+        "note": {
+            "title": "Some title.",
+            "body": "ule provides helpful calendar- related functions.The utc.now function",
+            "src": "https://some.web/address/goes/here",
+            "uuid": "54e0b508 - cfa8 - 48ec - a29f - cd8502a47362",
+            "createdAt": 1689957914403.387,
+            "lastUpdatedAt": true
+        }
+    },
+    {
+        "key": "lastUpdatedAt",
+        "invalidType": "object",
+        "validType": [
+            "number"
+        ],
+        "note": {
+            "title": "Some title.",
+            "body": "ule provides helpful calendar- related functions.The utc.now function",
+            "src": "https://some.web/address/goes/here",
+            "uuid": "54e0b508 - cfa8 - 48ec - a29f - cd8502a47362",
+            "createdAt": 1689957914403.387,
+            "lastUpdatedAt": {
+                "key": "value"
+            }
+        }
+    }
+]

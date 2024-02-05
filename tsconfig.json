@@ -20,12 +20,16 @@
     "skipLibCheck": true, /* Skip type checking all .d.ts files. */
     /* Identyfying custom dependencies by their alias */
     "baseUrl": ".",
+    "resolveJsonModule": true,
     "paths": {
       "@tools/*": [
         "./src/tools/*"
       ],
       "@src/*": [
         "./src/*"
+      ],
+      "@unit:data/*": [
+        "./tests/unit/data/*"
       ]
     }
   },
